@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+  .messages-container
+
+  form
+    input#m
+  script(src="/socket.io/socket.io.js")
+  script.
+    var socket = io()
+
+    socket.on('user connected', function (nickname) {
+      console.log(nickname);
+    });

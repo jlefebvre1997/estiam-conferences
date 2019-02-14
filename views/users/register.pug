@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+  form#registration-form(method="post")
+    label(for="username") Nom d'utilisateur
+    input#username(name="username")
+    label(for="password") Mot de passe
+    input#password(name="password", type="password")
+    label(for="email") Email
+    input#email(name="email")
+    button.btn.waves-effect.waves-light(type='submit', name='action')
+      | Inscription

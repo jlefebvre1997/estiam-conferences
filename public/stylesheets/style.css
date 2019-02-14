@@ -1,0 +1,19 @@
+.brand-logo {
+  margin-left: 5px;
+}
+
+#registration-form {
+  margin-top: 20px;
+}
+
+#new-conf-form {
+  margin-top: 20px;
+}
+
+#already-registered {
+  color: white;
+}
+
+.very-small {
+  height: 200px;
+}

@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+  .row
+    each conf in conferences
+      .col.s12.m4
+        .card.blue-grey.darken-1.very-small
+          .card-content.white-text
+            span.card-title #{conf.name}
+          .card-action
+            if user
+              - if(!_.some(conf.attendees, user))
+                a(href='/conferences/attend/' + conf._id) S'inscrire à la conférence
+              - else
+                p#already-registered Vous êtes déjà inscrit à cette conférence.
+                a(href='/conferences/' + conf.id) Accéder à la conférence
+            else
+              a(href='/users/login') Inscrivez-vous pour participer à cette conférence

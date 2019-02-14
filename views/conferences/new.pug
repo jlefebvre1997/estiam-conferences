@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+  form#new-conf-form(method='post')
+    label(for="name") Titre de la conférence
+    input#name(name="name")
+    label(for="date") Date de la conférence
+    input#date.datepicker(name="date")
+    label(for="start") Heure de début
+    input#start.timepicker(name="start")
+    label(for="end") Heure de fin
+    input#end.timepicker(name="end")
+    button.btn.waves-effect.waves-light(type='submit', name='action')
+      | Programmer
